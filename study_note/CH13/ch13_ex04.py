@@ -1,11 +1,16 @@
 from tkinter import *
 
+def bigger(self):
+    self["font"]=("Hel")
+
+def smaller(self):
 window=Tk()
 
-label=Label(window, text="안녕하세요!")
+label=Label(window, text="Hello, World!", font=("Helvetica", 16))
 label.pack()
 
-button=Button(window, text="tkinter로 버튼을 쉽게 만들 수 있습니다.")
-button.pack()
+b1=Button(window, text="폰트를 크게", command=bigger(label))
+b1.pack()
 
-window.mainloop()
+b2=Button(window, text="폰트를 작게", command=smaller(label))
+b1.pack()

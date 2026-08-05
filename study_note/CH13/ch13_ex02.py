@@ -1,8 +1,17 @@
 from tkinter import *
 
-window = Tk()
+window=Tk()
 
-b1=Button(window, text="이것이 파이썬 버튼입니다.")
-b1.pack()
+colors=["green", "red", "orange", "white", "yellow", "blue"]
+
+for i, c in enumerate(colors):
+    label=Label(window, text=c)
+    label.grid(row=i, column=0, pady=5)
+
+    button=Button(window, bg=c)
+    button.grid(row=i, column=1)
+
+
+
 
 window.mainloop()
